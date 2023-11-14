@@ -362,7 +362,7 @@ export const asyncRoutes = [
 
     ]
   },
-  
+
   // 商城
   {
     path: '/mall',
@@ -1292,61 +1292,6 @@ export const asyncRoutes = [
     name: 'plug_ins',
     meta: {title: '插件', icon: ['chajian','chajian1'], roles: 149},
     children: [
-      {
-        path: 'coupons',
-        name: 'coupons',
-        redirect: '/plug_ins/coupons/couponsList',
-        component: {
-          render(c) {
-            return c('router-view')
-          }
-        },
-        meta: {title: '卡券', roles: 215},
-        children: [
-          {
-            path: 'couponsList',
-            name: 'couponsList',
-            component: () => import('@/views/plug_ins/coupons/couponsList.vue'),
-            meta: {title: '优惠券列表',keepAlive: true}
-          },
-          {
-            path: 'addCoupons',
-            name: 'addCoupons',
-            component: () => import('@/views/plug_ins/coupons/addCoupons.vue'),
-            meta: {title: '添加优惠券'}
-          },
-          {
-            path: 'viewCoupons',
-            name: 'viewCoupons',
-            component: () => import('@/views/plug_ins/coupons/viewCoupons.vue'),
-            meta: {title: '查看优惠券'}
-          },
-          {
-            path: 'editorCoupons',
-            name: 'editorCoupons',
-            component: () => import('@/views/plug_ins/coupons/editorCoupons.vue'),
-            meta: {title: '编辑优惠券'}
-          },
-          {
-            path: 'getRecord',
-            name: 'getRecord',
-            component: () => import('@/views/plug_ins/coupons/getRecord.vue'),
-            meta: {title: '领取记录'}
-          },
-          {
-            path: 'givingRecords',
-            name: 'givingRecords',
-            component: () => import('@/views/plug_ins/coupons/givingRecords.vue'),
-            meta: {title: '赠送记录'}
-          },
-          {
-            path: 'couponsSet',
-            name: 'couponsSet',
-            component: () => import('@/views/plug_ins/coupons/couponsSet.vue'),
-            meta: {title: '优惠券设置'}
-          },
-        ]
-      },
       {
         path: 'stores',
         name: 'stores',
